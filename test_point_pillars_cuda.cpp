@@ -12,34 +12,6 @@
 std::string data_package = "/kitti/training/velodyne/";
 std::string save_dir = "../eval/kitti/object/pre_kitti/fp32/";
 
-void CloudToArray(const pcl::PointCloud<pcl::PointXYZI>::Ptr &cloud_ptr,
-                  float *out_points_array, const float normalizing_factor) {
-    for (size_t i = 0; i < cloud_ptr->size(); i++) {
-        pcl::PointXYZI point = cloud_ptr->at(i);
-        out_points_array[i * 4 + 0] = point.x;
-        out_points_array[i * 4 + 1] = point.y;
-        out_points_array[i * 4 + 2] = point.z;
-        out_points_array[i * 4 + 3] = point.intensity / normalizing_factor;
-    }
-}
-
-bool get_list(const std::string pcd_list_file, std::vector<std::string> &list) {
-    // 打开文件
-    std::ifstream inFile(pcd_list_file);
-    if (!inFile) {
-        return false;
-    }
-
-    std::string name;
-    while (inFile >> name) {
-        list.push_back(name);
-        inFile >> name;
-    }
-
-    // 关闭
-    inFile.close();
-    return true;
-}
 
 void Getinfo(void) {
     cudaDeviceProp prop;
