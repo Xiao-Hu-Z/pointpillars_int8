@@ -140,7 +140,7 @@ python kitti_format.py
 
 - Run evaluation kit on prediction and pcdet outputs
 
-> 参考：https://github.com/traveller59/kitti-object-eval-python，把相应的的依赖函数提取出来了，不需要单独安装second-1.5.1，spconv-1.0
+> 参考：https://github.com/traveller59/kitti-object-eval-python，我把相应的的依赖函数提取出放到kitti-object-eval-python里了，不需要单独安装second-1.5.1，spconv-1.0
 
 ```python
 python ./kitti-object-eval-python/evaluate.py evaluate --label_path=./kitti/object/training/label_2/ --result_path=./kitti/object/pcdet/ --label_split_file=./val.txt --current_class=0,1,2 --coco=False
