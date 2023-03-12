@@ -1,0 +1,3 @@
+#pragma once
+
+#define ROOT_PATH "@ROOT_PATH@"

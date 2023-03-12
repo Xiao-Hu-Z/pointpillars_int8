@@ -1,0 +1,8 @@
+model_file1: "model/pp_pfe_fp16_trtexec.trt"
+model_file2: "model/pp_rpn_fp32_trtexec.trt"
+preprocess_mode : true
+score_threshold: 0.05
+nms_overlap_threshold: 0.01
+
+
+
