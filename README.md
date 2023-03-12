@@ -210,7 +210,7 @@ python ./kitti-object-eval-python/evaluate.py evaluate --label_path=./kitti/obje
 
 也可以混合精度测试，通过修改config里的yaml参数，测试评估时要保证路径一一对应
 
-可以看出int8精度损失比较严重，需要进一步做感知训练量化，接下来会利用英伟达提供的[量化工具箱](https://github.com/NVIDIA/TensorRT/tree/master/tools/pytorch-quantization)进一步做感知训练量化
+可以看出int8精度损失比较严重，需要进一步做感知训练量化，可以利用英伟达提供的[量化工具箱](https://github.com/NVIDIA/TensorRT/tree/master/tools/pytorch-quantization)进一步做感知训练量化
 
 
 
