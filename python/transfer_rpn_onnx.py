@@ -8,12 +8,6 @@ import numpy as np
 import argparse
 import sys
 from pcdet.models.dense_heads .anchor_head_template import AnchorHeadTemplate
-# from pcdet.models.backbones_2d.backbone_cspdarknet53 import CSPDarknet53
-# from pcdet.models.backbones_2d.backbone_cspdarknet53_group import CSPDarknet53_g
-# from pcdet.models.backbones_2d.backbone_cspdarknet53_group_selayer import CSPDarknet53_gs
-# from pcdet.models.backbones_2d.backbone_resnet50 import ResNet50
-# from pcdet.models.backbones_2d.backbone_mobilenet_v2 import MobileNetV2
-
 
 class BaseBEVBackbone(nn.Module):
     def __init__(self, model_cfg, input_channels):
@@ -298,8 +292,8 @@ def build_input(cfg):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='arg parser')
-    parser.add_argument('--cfg_file', type=str, default='/root/xiaohu/OpenPCDet/tools/cfgs/kitti_models/pointpillar.yaml')
-    parser.add_argument('--ckpt_path', type=str, default='/root/xiaohu/OpenPCDet/output/kitti_models/pointpillar/default/ckpt/pointpillar_7728.pth')
+    parser.add_argument('--cfg_file', type=str, default='cfgs/kitti_models/pointpillar.yaml')
+    parser.add_argument('--ckpt_path', type=str, default='output/kitti_models/pointpillar/default/ckpt/pointpillar_7728.pth')
     parser.add_argument('--export_onnx_file', type=str, default='../model/pp_rpn.onnx')
     args = parser.parse_args()
 
