@@ -127,7 +127,7 @@ visualization_msgs::MarkerArray VisualizeDetectedObjects::ObjectsToBoxes(
             object_max_linear_size_) {
             visualization_msgs::Marker box;
             box.lifetime = ros::Duration(
-                marker_display_duration_); // marker_display_duration_
+                marker_display_duration_); 
             box.header = in_objects.header;
             box.type = visualization_msgs::Marker::LINE_STRIP;
             box.action = visualization_msgs::Marker::ADD;
@@ -161,14 +161,6 @@ visualization_msgs::MarkerArray VisualizeDetectedObjects::ObjectsToBoxes(
                 2 * x * z - 2 * y * w,     2 * y * z + 2 * x * w,
                 1 - 2 * x * x - 2 * y * y, float(object.pose.position.z)};
             for (int i = 0; i < 8; i++) {
-                // 待调试
-                // p[i].x =
-                //     RT[0] * p[i].x + RT[1] * p[i].y + RT[2] * p[i].z + RT[3];
-                // p[i].y =
-                //     RT[4] * p[i].x + RT[5] * p[i].y + RT[6] * p[i].z + RT[7];
-                // p[i].z =
-                //     RT[8] * p[i].x + RT[9] * p[i].y + RT[10] * p[i].z +
-                //     RT[11];
                 float x =
                     RT[0] * p[i].x + RT[1] * p[i].y + RT[2] * p[i].z + RT[3];
                 float y =
