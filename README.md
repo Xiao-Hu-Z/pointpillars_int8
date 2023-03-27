@@ -204,8 +204,8 @@ python ./kitti-object-eval-python/evaluate.py evaluate --label_path=./kitti/obje
 | Model             | Car@R11 | Pedestrian@R11 | Cyclist@R11 |
 | ----------------- | ------- | -------------- | ----------- |
 | OpenPCDet         | 77.09   | 51.94          | 62.35       |
-| PointPillars-FP32 | 74.75   | 52.82          | 60.89       |
-| PointPillars-FP16 | 74.70   | 52.78          | 60.94       |
+| PointPillars-FP32 | 76.75   | 52.82          | 61.89       |
+| PointPillars-FP16 | 76.70   | 52.78          | 61.94       |
 | PointPillars-int8 | 60.53   | 10.79          | 7.57        |
 
 也可以混合精度测试，通过修改config里的yaml参数，测试评估时要保证路径一一对应
