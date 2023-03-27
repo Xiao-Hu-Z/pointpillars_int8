@@ -187,7 +187,7 @@ python ./kitti-object-eval-python/evaluate.py evaluate --label_path=./kitti/obje
 
 # Speed analysis
 
-| Model               | 3080ti |
+| Model               | 3060ti |
 | ------------------- | ------ |
 | PointPillars-FP32   | 8.06   |
 | PointPillars-FP16   | 5.15   |
